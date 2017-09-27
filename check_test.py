@@ -14,10 +14,12 @@ def check(file_name):
 	with open(file_name,"rb") as file:
 		data = pickle.load(file)
 	#data is a list of tuple (28x28, 1) meaning the picture 28x28 and the coresponding class 0-9
-	print np.shape(data)
+	random.shuffle(data)
+
 	n = len(data)
+	i=-1
 	while True:
-		i = random.randint(0, n)
+		i+=1
 		print data[i][1]
 		cv2.imshow("picture",data[i][0]);
 		if (cv2.waitKey(0) & 0xFF == ord('q')):
