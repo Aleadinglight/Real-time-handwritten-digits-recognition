@@ -1,1 +1,1 @@
-# mnist_pytorch
+# Real-time handwritten digits recognition
